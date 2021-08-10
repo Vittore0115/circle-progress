@@ -4,7 +4,7 @@
 	"description": "❤ ❤ 环形进度条",
 	"main": "dist/circleProgress.min.js",
 	"scripts": {
-		"test": "jest",
+		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --display-error-details --config webpack.config.js"
 	},
 	"repository": {
