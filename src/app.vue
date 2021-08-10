@@ -78,7 +78,7 @@ export default {
 		},
 		content: {
 			type: String,
-			default: '无穷尽',
+			default: '画了个图',
 		},
 		viewDetails: {
 			type: String,
@@ -129,7 +129,7 @@ export default {
 			})
 		},
 		toComponent() {
-			this.$emit()
+			this.$emit('jumpPage', this.rate)
 		},
 	},
 }
@@ -160,18 +160,15 @@ export default {
 		top: 0;
 		left: 0;
 		.fraction {
-			font-size: 26px;
-			font-weight: bold;
-			display: block;
 			padding-top: 10%;
 			.desc_ {
-				font-size: 42px;
+				font-size: 16px;
 				font-weight: 400;
 				color: powderblue;
 				text-align: center;
 			}
 			.text {
-				font-size: 42px;
+				font-size: 16px;
 				font-weight: bold;
 				text-align: center;
 				padding-top: 16px;
@@ -180,16 +177,15 @@ export default {
 		}
 
 		.title {
-			width: 138px;
-			text-align: center;
-			border-radius: 22px;
+			width: 72px;
+			border-radius: 18px;
 			border: 1px solid rgba(194, 193, 193, 0.8);
 			color: blueviolet;
-			font-size: 25px;
+			font-size: 16px;
 			font-weight: 400;
 			position: absolute;
-			left: calc(50% - 69px);
-			bottom: 15px;
+			left: 41%;
+			bottom: 10px;
 		}
 	}
 }
