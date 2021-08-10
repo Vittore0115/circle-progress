@@ -19,16 +19,17 @@ module.exports = {
 				loader: 'vue-loader',
 			},
 			{
-				test: /\.scss$/,
+				test: /\.less$/,
 				use: [
 					{ loader: 'style-loader' },
 					{ loader: 'css-loader' },
-					{ loader: 'sass-loader' },
+					{ loader: 'less-loader' },
 				],
 			},
 			{
 				test: /\.js$/,
-				exclude: /node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+				exclude:
+					/node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
 				loader: 'babel-loader',
 			},
 			{
