@@ -1,6 +1,6 @@
 {
 	"name": "v-circle-progress",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "❤ ❤ 环形进度条",
 	"main": "dist/zwtCircleProgress.min.js",
 	"scripts": {
