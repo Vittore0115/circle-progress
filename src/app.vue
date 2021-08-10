@@ -68,14 +68,7 @@
 </template>
 
 <script>
-import {
-	defineComponent,
-	getCurrentInstance,
-	onMounted,
-	reactive,
-	toRefs,
-} from 'vue'
-export default defineComponent({
+export default {
 	name: 'Circleprogress',
 	props: {
 		title: {
@@ -117,35 +110,28 @@ export default defineComponent({
 			},
 		},
 	},
-	setup(props, context) {
-		// 定义响应式数据
-		const state = reactive({
-			dasharray: `0 ${props.width * 0.4 * Math.PI * 2}`,
-		})
-		//这里的ctx，类似于vue2中的this
-		const { proxy: ctx } = getCurrentInstance()
-
-		// 个人觉着这样写，比较舒适
-		const methods = {
-			draw(rate) {
-				ctx.$nextTick(() => {
-					let per = 0.75 * rate
-					let circle = ctx.$refs['progress']
-					let perimeter = circle.getTotalLength() //圆环的周长
-					state.dasharray =
-						perimeter * per + ' ' + perimeter * (1 - per)
-				})
-			},
-			toComponent() {
-				context.emit()
-			},
+	data() {
+		return {
+			dasharray: `0 ${this.width * 0.4 * Math.PI * 2}`,
 		}
-		onMounted(() => {
-			ctx.draw(ctx.rate)
-		})
-		return { ...toRefs(state), ...methods }
 	},
-})
+	mounted() {
+		this.draw(this.rate)
+	},
+	methods: {
+		draw(rate) {
+			this.$nextTick(() => {
+				let per = 0.75 * rate
+				let circle = this.$refs['progress']
+				let perimeter = circle.getTotalLength() //圆环的周长
+				this.dasharray = perimeter * per + ' ' + perimeter * (1 - per)
+			})
+		},
+		toComponent() {
+			this.$emit()
+		},
+	},
+}
 </script>
 <style lang="scss" scoped>
 .Circleprogress {
