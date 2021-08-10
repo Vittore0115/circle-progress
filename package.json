@@ -12,7 +12,7 @@
 		"url": "git+https://github.com/Vittore0115/circle-progress.git"
 	},
 	"keywords": [
-		"vue3",
+		"vue",
 		"webpack",
 		"circle-progress",
 		"circle"
