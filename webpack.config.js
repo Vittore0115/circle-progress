@@ -8,7 +8,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, './dist'), //输出路径，就是上步骤中新建的dist目录，
 		publicPath: '/dist/',
-		filename: 'circleProgress.min.js', // 输出文件，对应package.json中的main字段
+		filename: 'zwtCircleProgress.min.js', // 输出文件，对应package.json中的main字段
 		libraryTarget: 'umd',
 		umdNamedDefine: true,
 	},

@@ -1,8 +1,8 @@
 {
-	"name": "circle-progress",
+	"name": "v-circle-progress",
 	"version": "1.0.0",
 	"description": "❤ ❤ 环形进度条",
-	"main": "dist/circleProgress.min.js",
+	"main": "dist/zwtCircleProgress.min.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --display-error-details --config webpack.config.js"
