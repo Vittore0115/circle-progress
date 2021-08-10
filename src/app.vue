@@ -17,9 +17,10 @@
 					fill="none"
 					stroke-opacity="0.2"
 					:transform="`matrix(0,-1,1,0,0,${width})`"
-					:stroke-dasharray="`${0.75 * (width * 0.4 * Math.PI * 2)} ${
-						0.25 * (width * 0.4 * Math.PI * 2)
-					}`"
+					:stroke-dasharray="
+						`${0.75 * (width * 0.4 * Math.PI * 2)} ${0.25 *
+							(width * 0.4 * Math.PI * 2)}`
+					"
 				></circle>
 				<circle
 					ref="progress"
@@ -101,7 +102,7 @@ export default {
 		},
 		cssStyle: {
 			type: Object,
-			default: function () {
+			default: function() {
 				return {
 					titleColor: 'black',
 					textColor: 'rgb(88, 218, 88)',
@@ -133,7 +134,7 @@ export default {
 	},
 }
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .Circleprogress {
 	overflow: hidden;
 	.svgWrap {
@@ -164,18 +165,14 @@ export default {
 			display: block;
 			padding-top: 10%;
 			.desc_ {
-				font: {
-					size: 20px;
-					weight: 400;
-				}
+				font-size: 42px;
+				font-weight: 400;
 				color: powderblue;
 				text-align: center;
 			}
 			.text {
-				font: {
-					size: 42px;
-					weight: bold;
-				}
+				font-size: 42px;
+				font-weight: bold;
 				text-align: center;
 				padding-top: 16px;
 				color: rgb(88, 218, 88);
@@ -188,10 +185,8 @@ export default {
 			border-radius: 22px;
 			border: 1px solid rgba(194, 193, 193, 0.8);
 			color: blueviolet;
-			font: {
-				size: 25px;
-				weight: 400;
-			}
+			font-size: 25px;
+			font-weight: 400;
 			position: absolute;
 			left: calc(50% - 69px);
 			bottom: 15px;
