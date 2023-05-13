@@ -8,7 +8,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, './dist'), //输出路径，就是上步骤中新建的dist目录，
 		publicPath: '/dist/',
-		filename: 'circleProgress.min.js', // 输出文件，对应package.json中的main字段
+		filename: 'zwtCircleProgress.min.js', // 输出文件，对应package.json中的main字段
 		libraryTarget: 'umd',
 		umdNamedDefine: true,
 	},
@@ -19,16 +19,17 @@ module.exports = {
 				loader: 'vue-loader',
 			},
 			{
-				test: /\.scss$/,
+				test: /\.less$/,
 				use: [
 					{ loader: 'style-loader' },
 					{ loader: 'css-loader' },
-					{ loader: 'sass-loader' },
+					{ loader: 'less-loader' },
 				],
 			},
 			{
 				test: /\.js$/,
-				exclude: /node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+				exclude:
+					/node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
 				loader: 'babel-loader',
 			},
 			{
